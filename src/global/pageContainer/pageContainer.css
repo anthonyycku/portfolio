@@ -1,0 +1,19 @@
+.js-svg {
+    filter: invert(83%) sepia(29%) saturate(6577%) hue-rotate(3deg) brightness(90%) contrast(98%);
+}
+
+.css-svg {
+    filter: invert(75%) sepia(72%) saturate(939%) hue-rotate(230deg) brightness(99%) contrast(87%);
+}
+
+.file-svg {
+    filter: invert(20%) sepia(86%) saturate(2011%) hue-rotate(346deg) brightness(93%) contrast(104%);
+}
+
+.html-svg {
+    filter: invert(33%) sepia(68%) saturate(3426%) hue-rotate(121deg) brightness(87%) contrast(86%);
+}
+
+.bell-svg {
+    filter: invert(50%) sepia(6%) saturate(128%) hue-rotate(4deg) brightness(96%) contrast(88%);
+}
