@@ -10,16 +10,16 @@ const Tag: React.FC<TagProps> = ({ text, start = true, color = 'gold' }) => {
   const getColor = () => {
     switch (color) {
       case ('orange'):
-        return 'text-amber-400';
+        return 'text-amber-600';
       case ('purple'):
-        return 'text-purple-400';
+        return 'text-purple-500';
       default:
         return 'text-yellow-400';
     }
   }
 
   return (
-    <div className={getColor()}>
+    <div className={`${getColor()}`}>
       {`${start ? `<${text}>` : `</${text}>`}`}
     </div>
   )

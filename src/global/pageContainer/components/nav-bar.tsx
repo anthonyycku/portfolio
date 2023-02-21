@@ -5,6 +5,7 @@ import cssSVG from '../../../assets/svg/css-file-icon.svg';
 import fileSVG from '../../../assets/svg/pdf-file-icon.svg';
 import htmlSVG from '../../../assets/svg/html-file-icon.svg';
 import '../pageContainer.css'
+import { AiOutlineClose } from "react-icons/all";
 
 type RouteTab = [string, string, string, string];
 
@@ -41,7 +42,8 @@ const NavBar = () => {
   return (
     <>
       <div className="absolute right-0">
-        <button onClick={handleClose} className="hover:bg-red-500 w-8 p-0">X</button>
+        <button onClick={handleClose} className="hover:bg-red-500 px-2"><AiOutlineClose className="text-2xl py-1"/>
+        </button>
       </div>
 
       <div className="bg-slate-600 font-light text-center">
