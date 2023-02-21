@@ -4,9 +4,10 @@ interface TagProps {
   text: string;
   start?: boolean;
   color: 'gold' | 'orange' | 'purple';
+  styles?: string;
 }
 
-const Tag: React.FC<TagProps> = ({ text, start = true, color = 'gold' }) => {
+const Tag: React.FC<TagProps> = ({ styles, text, start = true, color = 'gold' }) => {
   const getColor = () => {
     switch (color) {
       case ('orange'):
@@ -19,8 +20,8 @@ const Tag: React.FC<TagProps> = ({ text, start = true, color = 'gold' }) => {
   }
 
   return (
-    <div className={`${getColor()}`}>
-      {`${start ? `<${text}>` : `</${text}>`}`}
+    <div className={`${getColor()} ${styles}`}>
+      <p>{`${start ? `<${text}>` : `</${text}>`}`}</p>
     </div>
   )
 }

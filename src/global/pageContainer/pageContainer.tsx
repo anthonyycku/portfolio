@@ -15,7 +15,7 @@ const PageContainer: FC<{ children: React.ReactNode }> = ({ children }) => {
       <div className="flex overflow-y-scroll h-full relative sm:mr-6" id="scrollable">
         <FaCheck className="invisible sm:visible fixed right-10 top-18 text-green-500"/>
         <LineBar ref={ref}/>
-        <div className="w-full min-h-[550px] xl:min-h-[400px] pl-[3rem] md:px-[3rem]  py-2" ref={ref}>
+        <div className="w-full min-h-[550px] xl:min-h-[400px] pl-[3rem] pr-2 md:px-[3rem]  py-2" ref={ref}>
           {children}
         </div>
       </div>

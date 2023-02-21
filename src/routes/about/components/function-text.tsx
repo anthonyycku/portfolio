@@ -1,18 +1,17 @@
 import React from 'react';
-import { AboutMeTypesList } from "../about";
+import { AboutMe } from "../about";
 
 interface FunctionTextProps {
-  children: React.ReactNode;
   name: string;
   paramsName: string;
   comment?: string;
-  stateChange: React.Dispatch<React.SetStateAction<string>>
-  state: string;
-  buttonsList?: AboutMeTypesList[];
+  stateChange: React.Dispatch<React.SetStateAction<AboutMe>>
+  state: AboutMe;
+  buttonsList?: AboutMe[];
 }
 
 const FunctionText = (
-  { name, children, paramsName, comment, state, stateChange, buttonsList }: FunctionTextProps
+  { name, paramsName, comment, state, stateChange, buttonsList }: FunctionTextProps
 ) => {
   return (
     <div className="flex flex-col space-y-2">
@@ -21,17 +20,17 @@ const FunctionText = (
           <span className="text-amber-600">const</span> <span className="text-yellow-400">{name}</span>
           <p>{`= (`}</p>
           <p>{paramsName}:</p>
-          <p className="text-amber-600">{state}</p>
+          <p className="text-amber-600">{state.name}</p>
           <p>{`) => {`}</p>
         </div>
 
         <div className="md:flex flex-col md:flex-row flex-wrap space-x-2">
           {comment && <p className="text-gray-500">{`//${comment}`}</p>}
-          {buttonsList && buttonsList.map(({ name }) => (
+          {buttonsList && buttonsList.map(({ name, text }) => (
             <button
               key={name}
-              onClick={() => stateChange(name)}
-              className={`text-sm border-amber-600 border rounded px-2 hover:bg-amber-700 hover:text-white ${state === name ? 'bg-emerald-700 text-white border-white' : 'text-amber-600'}`}
+              onClick={() => stateChange({ name, text })}
+              className={`text-sm border-amber-600 border rounded px-2 hover:bg-amber-700 hover:text-white ${state.name === name ? 'bg-emerald-700 text-white border-white' : 'text-amber-600'}`}
             >
               {name}
             </button>
@@ -40,7 +39,7 @@ const FunctionText = (
       </div>
 
       <p className="pl-4 xl:max-w-[50%] md:max-w-[75%] text-gray-50"
-         dangerouslySetInnerHTML={{ __html: buttonsList!.find(obj => obj.name === state)!.text }}></p>
+         dangerouslySetInnerHTML={{ __html: state.text }}></p>
 
       <p>{`}`}</p>
     </div>
