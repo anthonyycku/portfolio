@@ -29,7 +29,7 @@ const About = () => {
   const aboutWorkTypesList: AboutMe[] = [
     {
       name: 'Rational Enterprise',
-      text: "Software Engineer (May 2021 - Current) <br><br>I am currently developing eDiscovery software using React, Angular, and Java Spring Boot. My most notable assignments are: <br><br><li>Integrating Google API with our eDiscovery backend service, allowing clients to download and update their Google Drive files directly to and from the platform.</li> <br><li>Designing and building a new eDiscovery Governance application UI from scratch in React, using MaterialUI.</li> <br><li>Developing pre-discovery features in Angular.</li>"
+      text: "Software Engineer (May 2021 - Current) <br><br>I am currently developing eDiscovery software using React, Angular, and Java Spring Boot. My most notable assignments are: <br><br><li>Integrating Google API with our eDiscovery backend service and database, allowing clients to download and update their Google Drive files directly to and from the platform.</li> <br><li>Designing and building a new eDiscovery Governance application UI from scratch in React, using MaterialUI.</li> <br><li>Developing pre-discovery features in Angular and Spring Boot.</li>"
     }
   ]
 
