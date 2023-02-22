@@ -7,6 +7,19 @@ export interface AboutMe {
 }
 
 const About = () => {
+  const workInfo = (title: string = '', company: string = '', location: string = '', dates: string = '') => {
+    return (
+      `
+        <span class='text-amber-600 text-xl'>${title}</span> 
+        <div>
+        <span class='text-amber-500 text-lg'>${company}</span> 
+        <span class='text-white'>${location}</span>
+        </div>
+        <span class='text-white'>${dates}</span>
+        `
+    )
+  }
+
   const aboutMeTypesList: AboutMe[] = [
     {
       name: 'Person',
@@ -29,7 +42,27 @@ const About = () => {
   const aboutWorkTypesList: AboutMe[] = [
     {
       name: 'Rational Enterprise',
-      text: "Software Engineer (May 2021 - Current) <br><br>I am currently developing eDiscovery software using React, Angular, and Java Spring Boot. My most notable assignments are: <br><br><li>Integrating Google API with our eDiscovery backend service and database, allowing clients to download and update their Google Drive files directly to and from the platform.</li> <br><li>Designing and building a new eDiscovery Governance application UI from scratch in React, using MaterialUI.</li> <br><li>Developing pre-discovery features in Angular and Spring Boot.</li>"
+      text: `${workInfo("Software Engineer", "Rational Enterprise", "Albany, New York", "Full-time (May 2021 - Current)")}<br><br>I am currently developing eDiscovery software using React, Angular, and Java Spring Boot. I also conduct code reviews and help onboard new hires.<br><br>My most notable assignments are: <br><br><li>Integrating Google API with our eDiscovery backend service and database, allowing clients to download and update their Google Drive files directly to and from the platform.</li> <br><li>Designing and building a new eDiscovery Governance application UI from scratch in React, using MaterialUI.</li> <br><li>Developing pre-discovery features in Angular and Spring Boot.</li>`
+    },
+    {
+      name: 'Trader',
+      text: `${workInfo("Trader", "Self-employed", "", "(Jan 2016 - Feb 2021)")} <br><br>I actively managed my personal securities portfolio by executing buy and sell orderse based on a combination of fundamental and technical analysis. Through careful analysis, I sought to manage portfolio risk and optimize returns.<br><br>My takeaway from this was to practice discipline and patience, especially during periods of market volatility. Although I made a lot of mistakes, I found that these mistakes provided me with valuable opportunities for self-reflection and personal growth.`
+    },
+    {
+      name: 'BlueRock',
+      text: `${workInfo("IT Consulting", "BlueRock Networks", "San Francisco, California", "Internship (Aug - Sep 2018)")}<br><br>I provided on-site technical support to clients, assisting them with setup and troubleshooting their systems, software, and services. My clients were primarily start-up companies, and I worked closely with them to ensure that their infrastructure solutions were up-to-date and aligned with their growth objectives. <br><br>In addition to on-site support, I also performed system administration work, managing client systems remotely. Leveraging my expertise, I was able to resolve 95% of level 1 tickets through ZenDesk without the need for escalation.`
+    },
+    {
+      name: 'PrimeStreet',
+      text: `${workInfo("Financial Analyst", "PrimeStreet", "Bangkok, Thailand", "Internship (Jul - Sep 2017)")}<br><br>During my investment banking internship, I was responsible for generating financial forecasts, maintaining financial models, preparing reports and presentations for senior management.<br><br>Through this experience, I gained practical skills in financial analysis, budgeting, and forecasting, as well as exposure to real-world business operations.`
+    },
+    {
+      name: 'ITRI',
+      text: `${workInfo("Digital Marketing", "Industrial Technology Research Institute (ITRI)", "Hsinchu, Taiwan", "Internship (Aug - Sep 2016)")}<br><br>I was responsible for managing the company's social media peresence, including creating and publishing content, responding to comments, and engaging with followers. I used tools such as Facebook Insights to analyze metrics and track the performance of our social media campaigns. This allowed me to identify areas for improvement and make data-driven decisions to optimize our social media strategy.<br><br>Additionally, I conducted interviews with various departments in the company to learn about their initiatives and explore ways to integrate these into our social media content. This experience helped me develop stronger communication skills and allowed me to work collaboratively with various teams to achieve shared goals.`
+    },
+    {
+      name: 'KTB',
+      text: `${workInfo("Software Engineer", "KrungThai Bank", "Bangkok, Thailand", "Internship (Jul - Sep 2015)")}<br><br>I assisted in developing a backend user authentication system using Java and MySQL. This experience allowed me to work on a mission-critical project that was essential to the functioning of the bank's internal systems.<br><br>I wrote unit tests to ensure the system was functioning as expected and that new code did not negatively impact performance. I learned the importance of testing and optimization in software development.`
     }
   ]
 
@@ -49,8 +82,10 @@ const About = () => {
       <FunctionText
         name="aboutExperience"
         paramsName="company"
+        comment="Select company:"
         state={aboutWorkType}
         stateChange={setAboutWorkType}
+        buttonsList={aboutWorkTypesList}
       />
     </div>
   )

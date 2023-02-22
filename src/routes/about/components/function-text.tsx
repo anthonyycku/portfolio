@@ -15,7 +15,7 @@ const FunctionText = (
 ) => {
   return (
     <div className="flex flex-col space-y-2">
-      <div className="flex flex-col md:flex-row md:space-x-2">
+      <div className="flex-col md:flex-row md:space-x-2">
         <div className="flex space-x-2 whitespace-nowrap">
           <span className="text-amber-600">const</span> <span className="text-yellow-400">{name}</span>
           <p>{`= (`}</p>
@@ -24,7 +24,7 @@ const FunctionText = (
           <p>{`) => {`}</p>
         </div>
 
-        <div className="md:flex flex-col md:flex-row flex-wrap space-x-2">
+        <div className="md:flex flex-col md:flex-row flex-wrap space-x-2 gap-y-1">
           {comment && <p className="text-gray-500">{`//${comment}`}</p>}
           {buttonsList && buttonsList.map(({ name, text }) => (
             <button
@@ -38,7 +38,7 @@ const FunctionText = (
         </div>
       </div>
 
-      <p className="pl-4 xl:max-w-[50%] md:max-w-[75%] text-gray-50"
+      <p className="pl-4 xl:max-w-[50%] md:max-w-[75%] text-gray-200"
          dangerouslySetInnerHTML={{ __html: state.text }}></p>
 
       <p>{`}`}</p>

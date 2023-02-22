@@ -1,12 +1,13 @@
 import React, { forwardRef, MutableRefObject, useEffect, useState } from 'react';
+import { useLocation } from "react-router-dom";
 
 interface Props {
-
 }
 
 const LineBar = forwardRef<HTMLDivElement, Props>((props, ref) => {
   const [lines, setLines] = useState<number[]>(Array.from({ length: 100 }).map((_, i) => i + 1));
   const [height, setHeight] = useState(450);
+  const location = useLocation();
 
 
   useEffect(() => {
@@ -21,7 +22,7 @@ const LineBar = forwardRef<HTMLDivElement, Props>((props, ref) => {
         setHeight((ref as MutableRefObject<HTMLDivElement>).current.scrollHeight);
       })
     }
-  }, []);
+  }, [location]);
 
   return (
     <div
