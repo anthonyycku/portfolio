@@ -16,15 +16,15 @@ const FunctionText = (
   return (
     <div className="flex flex-col space-y-2">
       <div className="flex-col md:flex-row md:space-x-2">
-        <div className="flex space-x-2 whitespace-nowrap">
-          <span className="text-amber-600">const</span> <span className="text-yellow-400">{name}</span>
+        <div className="flex space-x-2 whitespace-nowrap items-baseline">
+          <span className="text-amber-600">const</span> <span className="text-yellow-400 text-xl">{name}</span>
           <p>{`= (`}</p>
           <p>{paramsName}:</p>
           <p className="text-amber-600">{state.name}</p>
           <p>{`) => {`}</p>
         </div>
 
-        <div className="md:flex flex-col md:flex-row flex-wrap space-x-2 gap-y-1">
+        <div className="md:flex flex-col md:flex-row flex-wrap space-x-2 gap-y-1 mt-2">
           {comment && <p className="text-gray-500">{`//${comment}`}</p>}
           {buttonsList && buttonsList.map(({ name, text }) => (
             <button

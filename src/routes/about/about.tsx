@@ -42,7 +42,7 @@ const About = () => {
   const aboutWorkTypesList: AboutMe[] = [
     {
       name: 'Rational Enterprise',
-      text: `${workInfo("Software Engineer", "Rational Enterprise", "Albany, New York", "Full-time (May 2021 - Current)")}<br><br>I am currently developing eDiscovery software using React, Angular, and Java Spring Boot. I also conduct code reviews and help onboard new hires.<br><br>My most notable assignments are: <br><br><li>Integrating Google API with our eDiscovery backend service and database, allowing clients to download and update their Google Drive files directly to and from the platform.</li> <br><li>Designing and building a new eDiscovery Governance application UI from scratch in React, using MaterialUI.</li> <br><li>Developing pre-discovery features in Angular and Spring Boot.</li>`
+      text: `${workInfo("Software Engineer", "Rational Enterprise", "Albany, New York", "Full-time (May 2021 - Current)")}<br><br>At present, I develop eDiscovery software, utilizing React, Angular and Java Spring Boot. In addition to coding, I conduct code reviews and assist with the onboarding of new hires.<br><br>Among my key assignments, I integrated Google API with our eDiscovery backend service and database, which enables clients to directly download and update files from their Google Drives and extract the file contents into our platform.<br><br>I have also designed and constructed a brand new UI for our eDiscovery Governance application from the ground up using React and MaterialUI, further contributing to the evolution of our software. Lastly I have developed pre-discovery features in Angular and Spring Boot, which have helped clients better prepare for the eDiscovery process.`
     },
     {
       name: 'Trader',
@@ -66,8 +66,37 @@ const About = () => {
     }
   ]
 
+  const skillsList = (list: string[]): string => {
+    let result = ``;
+    list.forEach(item => {
+      result += `<li>${item}</li>`
+    })
+    return result;
+  }
+
+  const frontEndList: string[] = ["React", "Angular", "Typescript / Javascript", "Redux / Content", "Jest", "Material UI", "TailwindCSS", "jQuery"];
+  const backEndList: string [] = ["Node / Express", "Java Spring Boot", "Ruby on Rails", "MySQL / PostgreSQL", "MongoDB"]
+  const toolsList: string [] = ["Google API / OAuth2", "AWS S3", "Photoshop", "Github/Git", "JIRA", "SCRUM/Agile"]
+
+  const aboutSkillsList: AboutMe[] = [
+    {
+      name: 'Frontend',
+      text: `${skillsList(frontEndList)}`
+    },
+    {
+      name: 'Backend',
+      text: `${skillsList(backEndList)}`
+    },
+    {
+      name: 'Tools',
+      text: `${skillsList(toolsList)}`
+    }
+  ]
+
+
   const [aboutMeType, setAboutMeType] = useState<AboutMe>(aboutMeTypesList[0]);
   const [aboutWorkType, setAboutWorkType] = useState<AboutMe>(aboutWorkTypesList[0]);
+  const [aboutSkillsType, setAboutSkillsType] = useState<AboutMe>(aboutSkillsList[0]);
 
   return (
     <div className="flex flex-col space-y-10 pb-2">
@@ -86,6 +115,14 @@ const About = () => {
         state={aboutWorkType}
         stateChange={setAboutWorkType}
         buttonsList={aboutWorkTypesList}
+      />
+      <FunctionText
+        name="aboutSkills"
+        paramsName="skills"
+        comment="Select skills:"
+        state={aboutSkillsType}
+        stateChange={setAboutSkillsType}
+        buttonsList={aboutSkillsList}
       />
     </div>
   )
