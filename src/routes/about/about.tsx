@@ -45,8 +45,8 @@ const About = () => {
       text: `${workInfo("Software Engineer", "Rational Enterprise", "Albany, New York", "Full-time (May 2021 - Current)")}<br><br>At present, I develop eDiscovery software, utilizing React, Angular and Java Spring Boot. In addition to coding, I conduct code reviews and assist with the onboarding of new hires.<br><br>Among my key assignments, I integrated Google API with our eDiscovery backend service and database, which enables clients to directly download and update files from their Google Drives and extract the file contents into our platform.<br><br>I have also designed and constructed a brand new UI for our eDiscovery Governance application from the ground up using React and MaterialUI, further contributing to the evolution of our software. Lastly I have developed pre-discovery features in Angular and Spring Boot, which have helped clients better prepare for the eDiscovery process.`
     },
     {
-      name: 'Trader',
-      text: `${workInfo("Trader", "Self-employed", "", "(Jan 2016 - Feb 2021)")} <br><br>I actively managed my personal securities portfolio by executing buy and sell orderse based on a combination of fundamental and technical analysis. Through careful analysis, I sought to manage portfolio risk and optimize returns.<br><br>My takeaway from this was to practice discipline and patience, especially during periods of market volatility. Although I made a lot of mistakes, I found that these mistakes provided me with valuable opportunities for self-reflection and personal growth.`
+      name: 'Stock Trader',
+      text: `${workInfo("Stock Trader", "Self-employed", "", "(Jan 2016 - Feb 2021)")} <br><br>I actively managed my personal securities portfolio by executing buy and sell orderse based on a combination of fundamental and technical analysis. Through careful analysis, I sought to manage portfolio risk and optimize returns.<br><br>My biggest takeaway from this was practicing discipline and patience, especially during periods of market volatility. Although I made a lot of mistakes, I found that these mistakes provided me with valuable opportunities for self-reflection and personal growth.`
     },
     {
       name: 'BlueRock',
@@ -76,7 +76,7 @@ const About = () => {
 
   const frontEndList: string[] = ["React", "Angular", "Typescript / Javascript", "Redux / Content", "Jest", "Material UI", "TailwindCSS", "jQuery"];
   const backEndList: string [] = ["Node / Express", "Java Spring Boot", "Ruby on Rails", "MySQL / PostgreSQL", "MongoDB"]
-  const toolsList: string [] = ["Google API / OAuth2", "AWS S3", "Photoshop", "Github/Git", "JIRA", "SCRUM/Agile"]
+  const toolsList: string [] = ["PocketBase / SupaBase", "Google API / OAuth2", "AWS S3", "Photoshop", "Github/Git", "JIRA", "SCRUM/Agile"]
 
   const aboutSkillsList: AboutMe[] = [
     {
