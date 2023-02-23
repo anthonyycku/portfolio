@@ -13,7 +13,7 @@ const Projects = () => {
       <br/>
       <Tags text=" MyFriendBill /" size="2xl"/>
       <img src={myFriendBillImage} width={1000}/>
-      <TagLine lineStyles="text-orange-400" text="Technologies" inline>
+      <TagLine lineStyles="text-orange-400" text="Stack" inline>
         React, Typescript, TailwindCSS, Supabase, PostgreSQL
       </TagLine>
       <TagLine text="Info" inline={false} color="purple">
