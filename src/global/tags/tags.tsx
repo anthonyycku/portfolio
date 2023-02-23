@@ -1,14 +1,22 @@
 import React from 'react';
 
-interface TagProps {
+export interface TagProps {
   text: string;
   start?: boolean;
-  color: 'gold' | 'orange' | 'purple';
+  color?: 'gold' | 'orange' | 'purple';
   styles?: string;
-  size?: 'sm' | 'lg' | 'xl' | '2xl';
+  size?: 'sm' | 'lg' | 'xl' | '2xl' | 'base';
 }
 
-const Tag: React.FC<TagProps> = ({ size, styles, text, start = true, color = 'gold' }) => {
+const Tag: React.FC<TagProps> = (
+  {
+    size = 'base',
+    styles,
+    text,
+    start = true,
+    color = 'gold'
+  }) => {
+
   const getColor = () => {
     switch (color) {
       case ('orange'):
@@ -20,21 +28,8 @@ const Tag: React.FC<TagProps> = ({ size, styles, text, start = true, color = 'go
     }
   }
 
-  const getSize = () => {
-    switch (size) {
-      case ('sm'):
-        return 'text-sm';
-      case ('lg'):
-        return 'text-lg';
-      case ('xl'):
-        return 'text-xl';
-      default:
-        return 'text-base';
-    }
-  }
-
   return (
-    <div className={`${getColor()} ${getSize()} ${styles}`}>
+    <div className={`${getColor()} text-${size} ${styles}`}>
       <p>{`${start ? `<${text}>` : `</${text}>`}`}</p>
     </div>
   )

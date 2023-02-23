@@ -4,15 +4,16 @@ import { AboutMe } from "../about";
 interface FunctionTextProps {
   name: string;
   paramsName: string;
-  comment?: string;
+  commentList?: string[];
   stateChange: React.Dispatch<React.SetStateAction<AboutMe>>
   state: AboutMe;
-  buttonsList?: AboutMe[];
+  buttonsList?: AboutMe[][];
 }
 
 const FunctionText = (
-  { name, paramsName, comment, state, stateChange, buttonsList }: FunctionTextProps
+  { name, paramsName, commentList, state, stateChange, buttonsList }: FunctionTextProps
 ) => {
+
   return (
     <div className="flex flex-col space-y-2">
       <div className="flex-col md:flex-row md:space-x-2">
@@ -24,18 +25,20 @@ const FunctionText = (
           <p>{`) => {`}</p>
         </div>
 
-        <div className="md:flex flex-col md:flex-row flex-wrap space-x-2 gap-y-1 mt-2">
-          {comment && <p className="text-gray-500">{`//${comment}`}</p>}
-          {buttonsList && buttonsList.map(({ name, text }) => (
-            <button
-              key={name}
-              onClick={() => stateChange({ name, text })}
-              className={`text-sm border-amber-600 border rounded px-2 hover:bg-amber-700 hover:text-white ${state.name === name ? 'bg-emerald-700 text-white border-white' : 'text-amber-600'}`}
-            >
-              {name}
-            </button>
-          ))}
-        </div>
+        {commentList && commentList.map((comment, commentListIndex) => (
+          <div className="md:flex flex-col md:flex-row flex-wrap space-x-2 gap-y-1 mt-2">
+            {comment && <p className="text-gray-500">{`//${comment}`}</p>}
+            {buttonsList?.[commentListIndex] && buttonsList[commentListIndex].map(({ name, text }) => (
+              <button
+                key={name}
+                onClick={() => stateChange({ name, text })}
+                className={`text-sm border-amber-600 border rounded px-2 hover:bg-amber-700 hover:text-white ${state.name === name ? 'bg-emerald-700 text-white border-white' : 'text-amber-600'}`}
+              >
+                {name}
+              </button>
+            ))}
+          </div>
+        ))}
       </div>
 
       <p className="pl-4 xl:max-w-[50%] md:max-w-[75%] text-gray-200"

@@ -22,28 +22,30 @@ const About = () => {
 
   const aboutMeTypesList: AboutMe[] = [
     {
-      name: 'Person',
+      name: 'Engineer',
       text: "I'm a flexible, results-driven, and growth-minded individual who values loyalty and passion. With experience in full-stack development, mentorship, and code review, my goal is to collaborate effectively and contribute to the success of the team.<br><br>I am committed to lifelong learning and believe that it is an essential part of personal growth and development. I always welcome challenges that take me out of my comfort zone - That's where the best learning gets done. <br><br>I consider myself easy-going and friendly; adaptable to new people and new environments. Fostering positive relationships with my colleagues and clients is vital to achieving long-term success."
     },
     {
       name: 'Athlete',
-      text: "Regular exercise is essential for maintaining a healthy mind and promotes overall well-being. That's why I try to go to the gym every day to lift away the evil spirits.<br><br>My main sport is badminton as I've been playing it since I was 5 years old and was president of my college badminton team. I'm alright at tennis, but not really. I sneak into local high school tennis courts to play.<br><br>I also have a 80lbs pitbull named Turtle, so I engage in a lot of activities with him. He throws, I fetch."
+      text: "Engaging in regular exercise is crucial for promoting physical and mental health. With this in mind, I make it a priority to hit the gym every day to keep those evil spirits away from my mental and physical gains.<br><br>My favorite sport is badminton, which I've been playing since the age of 5. I even had the honor of serving as the president of my college badminton team. I'm alright at tennis - I sneak into the local high school courts to play.<br><br>In addition to these sports, I spend a lot of time doing physical activities with my 80-pound pitbull, Turtle. He's a big boy."
     },
     {
       name: 'Musician',
-      text: "Although it's been a while, I did train as a pianist and guitarist when I was a child. I'm not musically gifted - at all - but practice and experience does prove to be a worthwhile endeavor.<br><br>I also enjoy singing but no one would pay to listen to that. Not even my mom."
+      text: "I trained as both a pianist and guitarist in my childhood. I wouldn't consider myself musically gifted, but I have found that consistent practice and experience have been well worth the effort.<br><br>I also enjoy singing but no one would pay to listen to that. Not even my mom, who loves me very much."
     },
     {
       name: 'DogTrainer',
-      text: "Dog training is a more recent activity of mine. It all started when I brought my dog, Turtle, to a trainer because he was very reactive when I first adopted him.<br><br> I ended up enjoying it so much that I sometimes help her train dogs. On weekends, I help train reactive dogs and provide the knowledge and tools to owners so that they can continue their pet's training by themselves."
+      text: "More recently, I have taken up dog training, which began when I sought professional help for my dog, Turtle. Initially, Turtle had a reactive personality, but with guidance and a skilled dog trainer, we were able to make significant strides in his behavior.<br><br>I found the process of training so fulfilling that on weekends I would assist the same trainer in training reactive dogs. I lend my support in training and equipping owners with the necessary knowledge and tools to continue their pet's training. It brings me great satisfaction to know that I am helping animals and their owners foster a deeper bond - and to keep them from being send back to the shelter."
     }
   ];
 
-  const aboutWorkTypesList: AboutMe[] = [
+  const aboutWorkTypesList1: AboutMe[] = [
     {
       name: 'Rational Enterprise',
       text: `${workInfo("Software Engineer", "Rational Enterprise", "Albany, New York", "Full-time (May 2021 - Current)")}<br><br>Currently, I develop eDiscovery software, utilizing React, Angular, and Java Spring Boot. In addition to coding, I conduct code reviews and assist with the onboarding of new hires.<br><br>Among my key assignments, I integrated Google API with our eDiscovery backend service and database, which enables clients to directly download and update files from their Google Drives and extract the file contents into ElasticSearch.<br><br>I have also designed and constructed a brand-new UI for our eDiscovery Governance application from the ground up using React and MaterialUI, further contributing to the evolution of our software. Lastly I have developed pre-discovery features in Angular and Spring Boot, which have helped clients better prepare for the eDiscovery process.`
-    },
+    }
+  ]
+  const aboutWorkTypesList2: AboutMe[] = [
     {
       name: 'Stock Trader',
       text: `${workInfo("Stock Trader", "Self-employed", "", "(Jan 2016 - Feb 2021)")} <br><br>I actively managed my personal securities portfolio by executing buy and sell orderse based on a combination of fundamental and technical analysis. Through careful analysis, I sought to manage portfolio risk and optimize returns.<br><br>My biggest takeaway from this was practicing discipline and patience, especially during periods of market volatility. Although I made a lot of mistakes, I found that these mistakes provided me with valuable opportunities for self-reflection and personal growth.`
@@ -75,8 +77,8 @@ const About = () => {
   }
 
   const frontEndList: string[] = ["React", "Angular", "Typescript / Javascript", "Redux / Content", "Jest", "Material UI", "TailwindCSS", "jQuery"];
-  const backEndList: string [] = ["Node / Express", "Java Spring Boot", "Ruby on Rails", "MySQL / PostgreSQL", "MongoDB"]
-  const toolsList: string [] = ["PocketBase / SupaBase", "Google API / OAuth2", "AWS S3", "Photoshop", "Github/Git", "JIRA", "SCRUM/Agile"]
+  const backEndList: string [] = ["Node / Express", "Java Spring Boot", "Ruby on Rails", "MySQL / PostgreSQL", "MongoDB", "PocketBase / SupaBase"]
+  const toolsList: string [] = ["Google API / OAuth2", "AWS S3", "Photoshop", "Github/Git", "JIRA", "SCRUM/Agile"]
 
   const aboutSkillsList: AboutMe[] = [
     {
@@ -95,7 +97,7 @@ const About = () => {
 
 
   const [aboutMeType, setAboutMeType] = useState<AboutMe>(aboutMeTypesList[0]);
-  const [aboutWorkType, setAboutWorkType] = useState<AboutMe>(aboutWorkTypesList[0]);
+  const [aboutWorkType, setAboutWorkType] = useState<AboutMe>(aboutWorkTypesList1[0]);
   const [aboutSkillsType, setAboutSkillsType] = useState<AboutMe>(aboutSkillsList[0]);
 
   return (
@@ -103,26 +105,26 @@ const About = () => {
       <FunctionText
         name="aboutMe"
         paramsName="me"
-        comment="Select a type:"
+        commentList={["Select type:"]}
         state={aboutMeType}
         stateChange={setAboutMeType}
-        buttonsList={aboutMeTypesList}
+        buttonsList={[aboutMeTypesList]}
       />
       <FunctionText
         name="aboutExperience"
         paramsName="company"
-        comment="Select company:"
+        commentList={["Current company:", "Past experiences:"]}
         state={aboutWorkType}
         stateChange={setAboutWorkType}
-        buttonsList={aboutWorkTypesList}
+        buttonsList={[aboutWorkTypesList1, aboutWorkTypesList2]}
       />
       <FunctionText
         name="aboutSkills"
         paramsName="skills"
-        comment="Select skills:"
+        commentList={["Select skills:"]}
         state={aboutSkillsType}
         stateChange={setAboutSkillsType}
-        buttonsList={aboutSkillsList}
+        buttonsList={[aboutSkillsList]}
       />
     </div>
   )
