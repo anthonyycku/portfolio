@@ -21,9 +21,9 @@ const TagLine: FC<TagLineProps> = (
   return (
     <div className={`${lineStyles} ${inline ? 'flex space-x-2' : 'flex-col'} text-${size}`}>
       <Tag text={text} start styles={styles} color={color} size={size}/>
-      <p className={`${!inline ? 'pl-4' : ''}`}>
+      <div className={`${!inline ? 'pl-4' : ''}`}>
         {children}
-      </p>
+      </div>
       <Tag text={text} start={false} styles={styles} color={color} size={size}/>
     </div>
   )

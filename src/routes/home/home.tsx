@@ -103,7 +103,7 @@ const Home: React.FC<HomeProps> = ({ homeVisited, setHomeVisited }) => {
                 <TypeAnimation
                     wrapper="p"
                     sequence={[
-                      `Welcome to my site! I'm Anthony, a software engineer specializing in React development.
+                      `Hi! Welcome to my site! I'm a software engineer specializing in React development.
                        My goal is to create visually intuitive, functionally rich web experiences that drive user engagement
                        and to provide cutting-edge solutions that bring your visions to life. 
                        I'm here to help you make a lasting impact. 
@@ -117,7 +117,7 @@ const Home: React.FC<HomeProps> = ({ homeVisited, setHomeVisited }) => {
         }
         {!titleDone && homeVisited && (
           <p>
-            Welcome to my site! I'm Anthony, a software engineer specializing in React development.
+            Hi! Welcome to my site! I'm a software engineer specializing in React development.
             My goal is to create visually intuitive, functionally rich web experiences that drive user engagement
             and to provide cutting-edge solutions that bring your visions to life. I'm here to help you make a
             lasting impact. Let's talk.

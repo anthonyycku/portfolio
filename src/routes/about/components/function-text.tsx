@@ -26,7 +26,7 @@ const FunctionText = (
         </div>
 
         {commentList && commentList.map((comment, commentListIndex) => (
-          <div className="md:flex flex-col md:flex-row flex-wrap space-x-2 gap-y-1 mt-2">
+          <div key={comment} className="md:flex flex-col md:flex-row flex-wrap space-x-2 gap-y-1 mt-2">
             {comment && <p className="text-gray-500">{`//${comment}`}</p>}
             {buttonsList?.[commentListIndex] && buttonsList[commentListIndex].map(({ name, text }) => (
               <button

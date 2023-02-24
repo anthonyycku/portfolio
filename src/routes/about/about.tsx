@@ -22,6 +22,10 @@ const About = () => {
 
   const aboutMeTypesList: AboutMe[] = [
     {
+      name: 'Background',
+      text: "My diverse background is a unique blend of culture and experiences. Born in the US, raised in Thailand, and of Taiwanese heritage, I have been immsersed in a variety of cultural environments, which has broadened my perspective and nurtured my appreciation for diversity.<br><br> Exposure to different languages, social norms, and ways of thinking has enabled me to become more empathetic and open-minded, fostering my ability to understand and respect differing ideas and perspectives."
+    },
+    {
       name: 'Engineer',
       text: "I'm a flexible, results-driven, and growth-minded individual who values loyalty and passion. With experience in full-stack development, mentorship, and code review, my goal is to collaborate effectively and contribute to the success of the team.<br><br>I am committed to lifelong learning and believe that it is an essential part of personal growth and development. I always welcome challenges that take me out of my comfort zone - That's where the best learning gets done. <br><br>I consider myself easy-going and friendly; adaptable to new people and new environments. Fostering positive relationships with my colleagues and clients is vital to achieving long-term success."
     },
@@ -32,6 +36,10 @@ const About = () => {
     {
       name: 'Musician',
       text: "I trained as both a pianist and guitarist in my childhood. I wouldn't consider myself musically gifted, but I have found that consistent practice and experience have been well worth the effort.<br><br>I also enjoy singing but no one would pay to listen to that. Not even my mom, who loves me very much."
+    },
+    {
+      name: 'Cook',
+      text: "As someone who values learning new things, I enjoy cooking as it allows me to experiment with new flavors and techniques. I approach cooking with a flexible and results-driven mindset and a willingness to take on new challenges. I also find that cooking serves as a creative outlet that also requires attention to detail and problem-solving skills; like what to do when I accidentally add 1 tablespoon of sugar instead of 1 teaspoon.<br><br>I grew up cooking Thai and Chinese food, and now I play around with western recipes and learning to grill. Desserts are also very fun to make but not in the best interest of my health as I have to eat what I make."
     },
     {
       name: 'DogTrainer',
