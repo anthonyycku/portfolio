@@ -23,7 +23,7 @@ const About = () => {
   const aboutMeTypesList: AboutMe[] = [
     {
       name: 'Background',
-      text: "My diverse background is a unique blend of culture and experiences. Born in the US, raised in Thailand, and of Taiwanese heritage, I have been immsersed in a variety of cultural environments, which has broadened my perspective and nurtured my appreciation for diversity.<br><br> Exposure to different languages, social norms, and ways of thinking has enabled me to become more empathetic and open-minded, fostering my ability to understand and respect differing ideas and perspectives."
+      text: "My diverse background is a unique blend of culture and experiences. Born in the US, raised in Thailand, and of Taiwanese heritage, I have been immsersed in a variety of cultural environments, which has broadened my perspective and nurtured my appreciation for diversity.<br><br> Exposure to different languages, social norms, and ways of thinking has enabled me to become more empathetic and open-minded, fostering my ability to understand and respect differing ideas that I can hopefully share and bring value to my workplace."
     },
     {
       name: 'Engineer',
@@ -39,18 +39,18 @@ const About = () => {
     },
     {
       name: 'Cook',
-      text: "As someone who values learning new things, I enjoy cooking as it allows me to experiment with new flavors and techniques. I approach cooking with a flexible and results-driven mindset and a willingness to take on new challenges. I also find that cooking serves as a creative outlet that also requires attention to detail and problem-solving skills; like what to do when I accidentally add 1 tablespoon of sugar instead of 1 teaspoon.<br><br>I grew up cooking Thai and Chinese food, and now I play around with western recipes and learning to grill. Desserts are also very fun to make but not in the best interest of my health as I have to eat what I make."
+      text: "As someone who values learning new things, I enjoy cooking as it allows me to experiment with new flavors and techniques; never having a shortage of challenges. I approach cooking the same way I approach new dogs: with a lot of love and a bit of fear.<br><br> I also find that cooking serves as a creative outlet that also requires attention to detail and problem-solving skills; like what to do when I accidentally add 1 tablespoon of sugar instead of 1 teaspoon.<br><br>As a child, my mom taught me the culinary wonders of Thai and chinese cuisine. Now that I'm in the states, I enjoy experimenting with Western recipes and perfecting my grilling skills. Desserts are cool too, but I can't make them too often because I keep eating it all."
     },
     {
       name: 'DogTrainer',
-      text: "More recently, I have taken up dog training, which began when I sought professional help for my dog, Turtle. Initially, Turtle had a reactive personality, but with guidance and a skilled dog trainer, we were able to make significant strides in his behavior.<br><br>I found the process of training so fulfilling that on weekends I would assist the same trainer in training reactive dogs. I lend my support in training and equipping owners with the necessary knowledge and tools to continue their pet's training. It brings me great satisfaction to know that I am helping animals and their owners foster a deeper bond - and to keep them from being send back to the shelter."
+      text: "More recently, I have taken up dog training, which began when I sought professional help for my dog, Turtle. Initially, Turtle had a reactive personality, but with guidance and a skilled dog trainer, we were able to make significant strides in his behavior.<br><br>I found the process of training so fulfilling that on weekends I would assist the same trainer in training reactive dogs. I lend my support in training and equipping owners with the necessary knowledge and tools to continue their pet's training. It brings me great satisfaction to know that I am helping animals and their owners foster a deeper bond - and to keep them from being sent back to the shelter."
     }
   ];
 
   const aboutWorkTypesList1: AboutMe[] = [
     {
       name: 'Rational Enterprise',
-      text: `${workInfo("Software Engineer", "Rational Enterprise", "Albany, New York", "Full-time (May 2021 - Current)")}<br><br>Currently, I develop eDiscovery software, utilizing React, Angular, and Java Spring Boot. In addition to coding, I conduct code reviews and assist with the onboarding of new hires.<br><br>Among my key assignments, I integrated Google API with our eDiscovery backend service and database, which enables clients to directly download and update files from their Google Drives and extract the file contents into ElasticSearch.<br><br>I have also designed and constructed a brand-new UI for our eDiscovery Governance application from the ground up using React and MaterialUI, further contributing to the evolution of our software. Lastly I have developed pre-discovery features in Angular and Spring Boot, which have helped clients better prepare for the eDiscovery process.`
+      text: `${workInfo("Software Engineer", "Rational Enterprise", "Albany, New York", "Full-time (May 2021 - Current)")}<br><br>Currently, I develop eDiscovery software, utilizing React, Angular, and Java Spring Boot. In addition to coding, I conduct code reviews and assist with the onboarding of new hires.<br><br>Among my key assignments, I integrated Google API with our eDiscovery backend service and database, which enables clients to directly download and update files from their Google Drives and extract the file contents into ElasticSearch.<br><br>My team and I also constructed a brand-new UI for our eDiscovery Governance application from the ground up using React and MaterialUI, further contributing to the evolution of our software. Lastly I have developed pre-discovery features in Angular and Spring Boot, which help clients better prepare for the eDiscovery process.`
     }
   ]
   const aboutWorkTypesList2: AboutMe[] = [
@@ -84,7 +84,7 @@ const About = () => {
     return result;
   }
 
-  const frontEndList: string[] = ["React", "Angular", "Typescript / Javascript", "Redux / Content", "Jest", "Material UI", "TailwindCSS", "jQuery"];
+  const frontEndList: string[] = ["React", "Angular", "Typescript / Javascript", "Redux / Context", "Jest", "Material UI", "TailwindCSS", "Css/Sass", "jQuery"];
   const backEndList: string [] = ["Node / Express", "Java Spring Boot", "Ruby on Rails", "MySQL / PostgreSQL", "MongoDB", "PocketBase / SupaBase"]
   const toolsList: string [] = ["Google API / OAuth2", "AWS S3", "Photoshop", "Github/Git", "JIRA", "SCRUM/Agile"]
 
