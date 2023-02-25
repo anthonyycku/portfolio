@@ -15,29 +15,20 @@ const Runescape = () => {
         <div className="flex space-x-4">
           <a
             target="_blank"
-            href="https://github.com/anthonyycku/osrs-autoit-scripts"
-            className="hover:text-green-400 flex items-center space-x-1"
-          >
-            <AiFillGithub/>
-            <p>Version 1(old)</p>
-            <BiLinkExternal/>
-          </a>
-          <a
-            target="_blank"
             href="https://github.com/anthonyycku/osrs-autoit-scripts-v2"
             className="hover:text-green-400 flex items-center space-x-1"
           >
             <AiFillGithub/>
-            <p>Version 2(new)</p>
+            <p>Github</p>
             <BiLinkExternal/>
           </a>
         </div>
       </div>
 
-      <Carousel>
-        <img src={osrs1} width={1000}/>
-        <img src={osrs2} width={1000}/>
-        <img src={osrs3} width={1000}/>
+      <Carousel width={950}>
+        <img src={osrs1}/>
+        <img src={osrs2}/>
+        <img src={osrs3}/>
       </Carousel>
 
       <TagLine lineStyles="text-orange-400" text="Stack" inline>

@@ -4,6 +4,9 @@ import MyFriendBill from "./projects/my-friend-bill";
 import TagLine from "./components/TagLine";
 import Jeffify from "./projects/jeffify";
 import Runescape from "./projects/runescape";
+import Vroom from "./projects/vroom";
+import Pawsrus from "./projects/pawsrus";
+import Inquizitor from "./projects/inquizitor";
 
 const Divider = () => {
   return (
@@ -36,6 +39,16 @@ const Projects = () => {
       <Runescape/>
 
       <Divider/>
+
+      <Vroom/>
+
+      <Divider/>
+
+      <Pawsrus/>
+
+      <Divider/>
+
+      <Inquizitor/>
     </div>
   )
 };

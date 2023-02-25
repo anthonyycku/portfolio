@@ -1,11 +1,11 @@
 import React from 'react';
 import TagLine from "../components/TagLine";
 import { AiFillGithub, BiLinkExternal, SiNetlify } from "react-icons/all";
-import { Carousel } from "react-responsive-carousel";
 import myFriendBillImage0 from "../../../assets/images/myfriendbill0.png";
 import myFriendBillImage from "../../../assets/images/myfriendbill.png";
 import myFriendBillImage2 from "../../../assets/images/myfriendbill2.png";
 import myFriendBillImage3 from "../../../assets/images/myfriendbill3.png";
+import { Carousel } from "react-responsive-carousel";
 
 const MyFriendBill = () => {
   return (
@@ -33,7 +33,7 @@ const MyFriendBill = () => {
           </a>
         </div>
       </div>
-      <Carousel width={1000}>
+      <Carousel width={950}>
         <img src={myFriendBillImage0}/>
         <img src={myFriendBillImage}/>
         <img src={myFriendBillImage2}/>
