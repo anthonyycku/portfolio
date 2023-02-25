@@ -5,7 +5,7 @@ interface Props {
 }
 
 const LineBar = forwardRef<HTMLDivElement, Props>((props, ref) => {
-  const [lines, setLines] = useState<number[]>(Array.from({ length: 100 }).map((_, i) => i + 1));
+  const [lines, setLines] = useState<number[]>(Array.from({ length: 200 }).map((_, i) => i + 1));
   const [height, setHeight] = useState(450);
   const location = useLocation();
 

@@ -3,6 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import MyFriendBill from "./projects/my-friend-bill";
 import TagLine from "./components/TagLine";
 import Jeffify from "./projects/jeffify";
+import Runescape from "./projects/runescape";
 
 const Divider = () => {
   return (
@@ -27,8 +28,14 @@ const Projects = () => {
       <MyFriendBill/>
 
       <Divider/>
-      
+
       <Jeffify/>
+
+      <Divider/>
+
+      <Runescape/>
+
+      <Divider/>
     </div>
   )
 };

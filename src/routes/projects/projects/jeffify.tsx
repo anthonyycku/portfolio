@@ -1,5 +1,5 @@
 import React from 'react';
-import { BiLinkExternal } from "react-icons/all";
+import { AiFillGithub, BiLinkExternal } from "react-icons/all";
 import jeffifyImage from '../../../assets/images/jeffify.png'
 import TagLine from "../components/TagLine";
 
@@ -15,7 +15,8 @@ const Jeffify = () => {
             href="https://github.com/anthonyycku/jeffify_react"
             className="hover:text-green-400 flex items-center space-x-1"
           >
-            <p>Github-Frontend</p>
+            <AiFillGithub/>
+            <p>Frontend</p>
             <BiLinkExternal/>
           </a>
           <a
@@ -23,7 +24,8 @@ const Jeffify = () => {
             href="https://github.com/anthonyycku/jeffify"
             className="hover:text-green-400 flex items-center space-x-1"
           >
-            <p>Github-Backend</p>
+            <AiFillGithub/>
+            <p>Backend</p>
             <BiLinkExternal/>
           </a>
         </div>

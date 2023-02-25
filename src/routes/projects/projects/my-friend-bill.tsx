@@ -1,6 +1,6 @@
 import React from 'react';
 import TagLine from "../components/TagLine";
-import { BiLinkExternal } from "react-icons/all";
+import { AiFillGithub, BiLinkExternal, SiNetlify } from "react-icons/all";
 import { Carousel } from "react-responsive-carousel";
 import myFriendBillImage0 from "../../../assets/images/myfriendbill0.png";
 import myFriendBillImage from "../../../assets/images/myfriendbill.png";
@@ -18,6 +18,7 @@ const MyFriendBill = () => {
             href="https://myfriendbill.netlify.app/"
             className="hover:text-green-400 flex items-center space-x-1"
           >
+            <SiNetlify/>
             <p>Site</p>
             <BiLinkExternal/>
           </a>
@@ -26,6 +27,7 @@ const MyFriendBill = () => {
             href="https://github.com/anthonyycku/MyFriendBill"
             className="hover:text-green-400 flex items-center space-x-1"
           >
+            <AiFillGithub/>
             <p>Github</p>
             <BiLinkExternal/>
           </a>
