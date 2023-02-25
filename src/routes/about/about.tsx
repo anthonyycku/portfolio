@@ -10,9 +10,9 @@ const About = () => {
   const workInfo = (title: string = '', company: string = '', location: string = '', dates: string = '') => {
     return (
       `
-        <span class='text-amber-600 text-xl'>${title}</span> 
+        <span class='text-amber-500 text-xl'>${title}</span> 
         <div>
-        <span class='text-amber-500 text-lg'>${company}</span> 
+        <span class='text-amber-600 text-lg'>${company}</span> 
         <span class='text-white'>${location}</span>
         </div>
         <span class='text-white'>${dates}</span>
@@ -23,7 +23,7 @@ const About = () => {
   const aboutMeTypesList: AboutMe[] = [
     {
       name: 'Background',
-      text: "My diverse background is a unique blend of culture and experiences. Born in the US, raised in Thailand, and of Taiwanese heritage, I have been immsersed in a variety of cultural environments, which has broadened my perspective and nurtured my appreciation for diversity.<br><br> Exposure to different languages, social norms, and ways of thinking has enabled me to become more empathetic and open-minded, fostering my ability to understand and respect differing ideas that I can hopefully share and bring value to my workplace."
+      text: "My diverse background is a unique blend of culture and experiences. Born in the US, raised in Thailand, and of Taiwanese heritage, I have been immersed in a variety of cultural environments, which has broadened my perspective and nurtured my appreciation for diversity.<br><br>I believe my background has helped me develop a greater sense of empathy and open-mindedness in better understanding and appreciating differing ideas, and I'm excited to bring this fresh perspective to my workplace."
     },
     {
       name: 'Engineer',

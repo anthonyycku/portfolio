@@ -14,7 +14,7 @@ const LineBar = forwardRef<HTMLDivElement, Props>((props, ref) => {
     if (!(ref as MutableRefObject<HTMLDivElement>).current) return;
     setTimeout(() => {
       setHeight((ref as MutableRefObject<HTMLDivElement>).current.scrollHeight);
-    }, 50);
+    }, 100);
     window.addEventListener('resize', () => {
       setHeight((ref as MutableRefObject<HTMLDivElement>).current.scrollHeight);
     })

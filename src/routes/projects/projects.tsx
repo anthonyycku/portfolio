@@ -4,6 +4,16 @@ import MyFriendBill from "./projects/my-friend-bill";
 import TagLine from "./components/TagLine";
 import Jeffify from "./projects/jeffify";
 
+const Divider = () => {
+  return (
+    <>
+      <br/>
+      <div className="border border-b-2 border-gray-400 w-full "/>
+      <br/>
+    </>
+  )
+}
+
 const Projects = () => {
 
   return (
@@ -11,13 +21,13 @@ const Projects = () => {
       <TagLine text="h1" inline size="2xl" lineStyles="text-orange-400">
         Projects
       </TagLine>
-      <br/>
-      <div className="border border-b-2 border-gray-400 w-full "/>
-      <br/>
+
+      <Divider/>
+
       <MyFriendBill/>
-      <br/>
-      <div className="border border-b-2 border-gray-400 w-full "/>
-      <br/>
+
+      <Divider/>
+      
       <Jeffify/>
     </div>
   )
