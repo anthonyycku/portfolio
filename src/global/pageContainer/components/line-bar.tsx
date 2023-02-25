@@ -1,4 +1,4 @@
-import React, { forwardRef, MutableRefObject, useLayoutEffect, useState } from 'react';
+import React, { forwardRef, MutableRefObject, useEffect, useState } from 'react';
 import { useLocation } from "react-router-dom";
 
 interface Props {
@@ -10,7 +10,7 @@ const LineBar = forwardRef<HTMLDivElement, Props>((props, ref) => {
   const location = useLocation();
 
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!(ref as MutableRefObject<HTMLDivElement>).current) return;
     setTimeout(() => {
       setHeight((ref as MutableRefObject<HTMLDivElement>).current.scrollHeight);
