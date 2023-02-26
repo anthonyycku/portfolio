@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ProfilePic1 from '../../assets/images/profilepic.png';
 import ProfilePic2 from '../../assets/images/profilepic2.png';
 import ProfilePic3 from '../../assets/images/profilepic3.png';
@@ -14,15 +14,13 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ homeVisited, setHomeVisited }) => {
   const [nameDone, setNameDone] = useState(false);
   const [titleDone, setTitleDone] = useState(false);
-  const visitedRef = useRef(false);
 
   const [imageIndex, setImageIndex] = useState(0);
   const images = [ProfilePic1, ProfilePic2, ProfilePic3];
 
   useEffect(() => {
     return () => {
-      if (visitedRef.current) setHomeVisited(true);
-      visitedRef.current = true;
+      setHomeVisited(true);
     }
   }, [])
 
